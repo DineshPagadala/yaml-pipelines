@@ -1,1 +1,30 @@
+trigger: none
 
+pool:
+  vmImage: 'ubuntu-16.04'
+
+stages:
+  stage : A1
+  jobs:
+  - job J1:
+    steps :
+    - script: echo "A1-J1"
+
+  jobs:
+  - job J2:
+    steps :
+    - script: echo "A1-J2"
+
+stages:
+  stage : A2
+  jobs:
+  - job J1:
+    steps :
+    - script: echo "A2-J1"
+
+  jobs:
+  - job J2:
+    steps :
+    - script: echo "A2-J2"
+
+ # third yml file
